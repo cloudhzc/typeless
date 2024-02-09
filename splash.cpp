@@ -1,21 +1,21 @@
 #include <stdio.h>
 
 void splash (int VERSION_MAJOR, int VERSION_MINOR, int VERSION_PATCH, int VERSION_TYPE) {
-    char VERSION_MAJOR_STR[2];
+    VERSION_MAJOR = VERSION_MAJOR - 48;
+    VERSION_MINOR = VERSION_MINOR - 48;
+    VERSION_PATCH = VERSION_PATCH - 48;
+    char VERSION_MAJOR_STR[4];
     sprintf (VERSION_MAJOR_STR, "%d", VERSION_MAJOR);
-    const char* result = VERSION_MAJOR_STR;
-    char VERSION_MINOR_STR[2];
+    char VERSION_MINOR_STR[4];
     sprintf (VERSION_MINOR_STR, "%d", VERSION_MINOR);
-    const char* result = VERSION_MINOR_STR;
-    char VERSION_PATCH_STR[2];
+    char VERSION_PATCH_STR[4];
     sprintf (VERSION_PATCH_STR, "%d", VERSION_PATCH);
-    const char* result = VERSION_PATCH_STR;
     printf ("Typeless v");
-    printf (VERSION_MAJOR);
+    printf (VERSION_MAJOR_STR);
     printf (".");
-    printf (VERSION_MINOR);
+    printf (VERSION_MINOR_STR);
     printf (".");
-    printf (VERSION_PATCH);
+    printf (VERSION_PATCH_STR);
     printf (" ");
     if (VERSION_TYPE == 0) {
         printf ("Alpha\n");
@@ -33,6 +33,5 @@ void splash (int VERSION_MAJOR, int VERSION_MINOR, int VERSION_PATCH, int VERSIO
         printf ("ERROR 00001\n");
         printf ("ERR_VERSION_TYPE\n");
     }
-    printf ("\n");
     // example: Typeless v0.0.1 Alpha
 }
