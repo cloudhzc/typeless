@@ -5,7 +5,7 @@ int home (char *argv) {
     printf ("2. New\n");
     printf ("3. Settings\n");
     printf ("4. Exit\n");
-    char home_input[4];
+    int home_input;
     scanf (home_input);
     printf (home_input);
     return 0;
