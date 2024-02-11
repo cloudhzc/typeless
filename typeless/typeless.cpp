@@ -3,7 +3,7 @@ int VERSION_MINOR = '0';
 int VERSION_PATCH = '1';
 int VERSION_TYPE = 0; // 0=Alpha, 1=Beta, 2=Release, 3=LTS
 
-#include "get_display.cpp"
+#include "vwm/vwm.get_display.cpp"
 #include "splash.cpp"
 #include "home.cpp"
 #include <stdio.h>
